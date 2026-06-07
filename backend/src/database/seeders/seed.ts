@@ -272,9 +272,6 @@ async function seed() {
     console.log('  Editor  → eve@manhwa.com     / password123');
     console.log('  Users   → alice@manhwa.com   / password123');
     console.log('           → bob@manhwa.com     / password123');
-    console.log('           → charlie@manhwa.com / password123');
-    console.log('           → diana@manhwa.com   / password123');
-    console.log('           → john@example.com   / password123');
   } catch (error) {
     console.error('❌ Seeding failed:', error);
     process.exit(1);

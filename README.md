@@ -1,12 +1,12 @@
 # 🗂️ BacaManhwa — Monorepo
 
-Full-stack aplikasi katalog manhwa untuk keperluan onboarding.
+Full-stack manhwa catalog application built for onboarding purposes.
 
-## Struktur Project
+## Project Structure
 
 ```
 BACA_MANHWA/
-├── docs/              # Screenshot preview
+├── docs/              # Preview screenshots
 ├── backend/           # NestJS REST API + PostgreSQL
 ├── frontend/          # React + Vite + TailwindCSS
 └── docker-compose.yml
@@ -14,40 +14,54 @@ BACA_MANHWA/
 
 ## 📸 Preview
 
-### Katalog Manhwa
-![Home](./docs/preview-home.png)
-
-### Bookmarks
-![Bookmarks](./docs/preview-bookmarks.png)
-
-### Detail Manhwa
-![Detail](./docs/preview-detail.png)
-
-### Admin Dashboard
-![Admin](./docs/preview-admin-dashboard.png)
-
-### Editor Dashboard
-![Editor](./docs/preview-editor-dashboard.png)
+| Page             | Screenshot                      |
+|------------------|---------------------------------|
+| Home             | ![Home](docs/home.png)          |
+| Bookmarks        | ![Bookmarks](docs/bookmarks.png)|
+| Manhwa Detail    | ![Detail](docs/detail.png)      |
+| Admin Dashboard  | ![Admin](docs/admin.png)        |
+| Editor Dashboard | ![Editor](docs/editor.png)      |
 
 ## 🚀 Quick Start (Docker)
 
 ```bash
-# Clone repo, lalu jalankan semua service sekaligus
+# Clone the repo, then start all services at once
 docker-compose up -d
 
-# Seed database (jalankan sekali setelah container up)
+# Seed the database (run once after containers are up)
 docker-compose exec api npm run seed
 ```
 
-| Service  | URL                            |
-|----------|--------------------------------|
-| Frontend | http://localhost:5173          |
-| API      | http://localhost:3000/api/v1   |
-| Swagger  | http://localhost:3000/api/docs |
+| Service  | URL                              |
+|----------|----------------------------------|
+| Frontend | http://localhost:5173            |
+| API      | http://localhost:3000/api/v1     |
+| Swagger  | http://localhost:3000/api/docs   |
 
-## 📄 Dokumentasi Lengkap
+## 🌱 Seed Accounts
+
+After seeding, the following accounts are available:
+
+| Role   | Email              | Password    |
+|--------|--------------------|-------------|
+| Admin  | admin@manhwa.com   | password123 |
+| Editor | editor@manhwa.com  | password123 |
+| User   | alice@manhwa.com   | password123 |
+| User   | bob@manhwa.com     | password123 |
+
+10 sample manhwas are also created.
+
+## 🔐 Roles & Permissions
+
+| Feature           | GUEST | USER | EDITOR | ADMIN |
+|-------------------|-------|------|--------|-------|
+| View manhwas      | ✅    | ✅   | ✅     | ✅    |
+| Manage bookmarks  | ❌    | ✅   | ✅     | ✅    |
+| CRUD manhwas      | ❌    | ❌   | ✅     | ✅    |
+| User management   | ❌    | ❌   | ❌     | ✅    |
+| Change user roles | ❌    | ❌   | ❌     | ✅    |
+
+## 📄 Further Documentation
 
 - [Backend README](./backend/README.md)
 - [Frontend README](./frontend/README.md)
-
-

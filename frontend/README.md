@@ -1,6 +1,6 @@
 # BacaManhwa — Frontend
 
-Aplikasi web katalog manhwa untuk onboarding frontend dengan React, SWR, TailwindCSS, Ant Design, dan Axios.
+React-based manhwa catalog web app. For full project overview, Docker setup, seed accounts, and role permissions, see the [root README](../README.md).
 
 ## Tech Stack
 
@@ -11,16 +11,18 @@ Aplikasi web katalog manhwa untuk onboarding frontend dengan React, SWR, Tailwin
 - React Router v7
 - Axios
 
-## Setup
+## Local Development
 
 ```bash
 npm install
 cp .env.example .env
-# Set VITE_API_URL ke URL backend kamu
+# Set VITE_API_URL to your backend URL
 npm run dev
 ```
 
-## Struktur Folder
+> To run the full stack together, use Docker Compose from the root directory instead.
+
+## Folder Structure
 
 ```
 src/
@@ -38,10 +40,10 @@ src/
 └── types/             # TypeScript interfaces
 ```
 
-## Role & Redirect setelah Login
+## Post-Login Redirect by Role
 
-| Role   | Redirect           |
-|--------|--------------------|
-| ADMIN  | /dashboard/admin   |
-| EDITOR | /dashboard/editor  |
-| USER   | /                  |
+| Role   | Redirect          |
+|--------|-------------------|
+| ADMIN  | /dashboard/admin  |
+| EDITOR | /dashboard/editor |
+| USER   | /                 |

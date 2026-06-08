@@ -14,13 +14,13 @@ BACA_MANHWA/
 
 ## 📸 Preview
 
-| Page             | Screenshot                      |
-|------------------|---------------------------------|
-| Home             | ![Home](docs/home.png)          |
-| Bookmarks        | ![Bookmarks](docs/bookmarks.png)|
-| Manhwa Detail    | ![Detail](docs/detail.png)      |
-| Admin Dashboard  | ![Admin](docs/admin.png)        |
-| Editor Dashboard | ![Editor](docs/editor.png)      |
+| Page             | Screenshot                                          |
+|------------------|-----------------------------------------------------|
+| Home             | ![Home](docs/preview-home.png)                      |
+| Bookmarks        | ![Bookmarks](docs/preview-bookmarks.png)            |
+| Manhwa Detail    | ![Detail](docs/preview-detail.png)                  |
+| Admin Dashboard  | ![Admin](docs/preview-admin-dashboard.png)          |
+| Editor Dashboard | ![Editor](docs/preview-editor-dashboard.png)        |
 
 ## 🚀 Quick Start (Docker)
 
@@ -46,10 +46,11 @@ After seeding, the following accounts are available:
 |--------|--------------------|-------------|
 | Admin  | admin@manhwa.com   | password123 |
 | Editor | editor@manhwa.com  | password123 |
+| User   | eve@manhwa.com     | password123 |
 | User   | alice@manhwa.com   | password123 |
 | User   | bob@manhwa.com     | password123 |
 
-10 sample manhwas are also created.
+10+ sample manhwas are also created.
 
 ## 🔐 Roles & Permissions
 
